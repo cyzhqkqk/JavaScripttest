@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // 이것은 다른 객체가 되어 버린다.
+    var obj3 = {
+        c:3,
+        r:5
+    }
+
+    var obj1 = {
+        // object 안에 정수, 배열, 문자열, 불린, object, 실수 .. 이거는 프로퍼티
+        a:1,
+        b:'bbb',
+        // object 안에 함수가 들어 있으면 메소드
+        obj3: {
+            c:3,
+            r:5        
+        },
+
+        g : function() {        // 객체 안에서는 오로지 익명함수
+            var j = 3;
+        }
+    };
+
+    obj1.a = 2;     // 프로퍼티 .점은 모든 접근이 가능하다.
+    obj1.obj3.c = 5;
+
+    console.log(obj1);
+</script>    
+</body>
+</html>
